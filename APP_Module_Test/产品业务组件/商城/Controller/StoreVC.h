@@ -11,6 +11,8 @@
 @interface StoreVC : UIViewController
 
 
+@property (nonatomic, copy) void (^block)(NSString *title);
+
 /**
  *  带广告轮播图的商城VC
  *

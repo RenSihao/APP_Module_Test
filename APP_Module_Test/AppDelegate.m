@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "RootVC.h"
+#import <JSPatch/JSPatch.h>
 
+static NSString * const JSPatch_App_Key = @"ba79274069f7140d";
 
 @interface AppDelegate ()
 
@@ -20,6 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //以下两句代码二选一
+    [self setUpJSPatch];
+//    [JSPatch testScriptInBundle];
     
     [self setUpKeyWindow];
     
@@ -65,4 +70,28 @@
     return [[[Mediator sharedInstance] performActionWithURL:url completion:nil] boolValue];
 }
 
+#pragma mark - 初始化JSPatch
+
+- (void)setUpJSPatch
+{
+#ifdef DEBUG
+    [JSPatch setupLogger:^(NSString *msg) {
+        NSLog(@"JSPatch_msg===>%@", msg);
+    }];
+    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+        
+    }];
+    [JSPatch setupDevelopment];
+    [JSPatch startWithAppKey:JSPatch_App_Key];
+    [JSPatch sync];
+#else
+    [JSPatch startWithAppKey:JSPatch_App_Key];
+    [JSPatch sync];
+    
+#endif
+}
+
+
 @end
+
+

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520441DE1D20C7A400B90AEE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 520441DD1D20C7A400B90AEE /* libz.tbd */; };
+		520441E01D20C7AC00B90AEE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520441DF1D20C7AC00B90AEE /* JavaScriptCore.framework */; };
+		520441E31D20C7E500B90AEE /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520441E21D20C7E500B90AEE /* JSPatch.framework */; };
 		528BC5F11D1BA82600BBEF06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528BC5F01D1BA82600BBEF06 /* main.m */; };
 		528BC5F41D1BA82600BBEF06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528BC5F31D1BA82600BBEF06 /* AppDelegate.m */; };
 		528BC5FC1D1BA82600BBEF06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528BC5FB1D1BA82600BBEF06 /* Assets.xcassets */; };
@@ -45,6 +48,7 @@
 		52F033681D1D06BE00CF63C6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F033651D1D06BE00CF63C6 /* 1.png */; };
 		52F033691D1D06BE00CF63C6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F033661D1D06BE00CF63C6 /* 2.png */; };
 		52F0336A1D1D06BE00CF63C6 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 52F033671D1D06BE00CF63C6 /* 3.png */; };
+		52FFBA461D2100EA009E14DD /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 52FFBA451D2100EA009E14DD /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		520441DD1D20C7A400B90AEE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		520441DF1D20C7AC00B90AEE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		520441E21D20C7E500B90AEE /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		528BC5EC1D1BA82600BBEF06 /* APP_Module_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APP_Module_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528BC5F01D1BA82600BBEF06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		528BC5F21D1BA82600BBEF06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 		52F033651D1D06BE00CF63C6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../1.png; sourceTree = "<group>"; };
 		52F033661D1D06BE00CF63C6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../../2.png; sourceTree = "<group>"; };
 		52F033671D1D06BE00CF63C6 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../../3.png; sourceTree = "<group>"; };
+		52FFBA451D2100EA009E14DD /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520441E31D20C7E500B90AEE /* JSPatch.framework in Frameworks */,
+				520441E01D20C7AC00B90AEE /* JavaScriptCore.framework in Frameworks */,
+				520441DE1D20C7A400B90AEE /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,9 +180,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520441D41D20C5FA00B90AEE /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				520441E11D20C7E500B90AEE /* JSPatch */,
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		520441E11D20C7E500B90AEE /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				520441DD1D20C7A400B90AEE /* libz.tbd */,
+				520441DF1D20C7AC00B90AEE /* JavaScriptCore.framework */,
+				520441E21D20C7E500B90AEE /* JSPatch.framework */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
 		528BC5E31D1BA82600BBEF06 = {
 			isa = PBXGroup;
 			children = (
+				52FFBA451D2100EA009E14DD /* main.js */,
 				528BC5EE1D1BA82600BBEF06 /* APP_Module_Test */,
 				528BC6081D1BA82600BBEF06 /* APP_Module_TestTests */,
 				528BC6131D1BA82600BBEF06 /* APP_Module_TestUITests */,
@@ -196,10 +226,11 @@
 				528BC5F31D1BA82600BBEF06 /* AppDelegate.m */,
 				528BC62C1D1BE72300BBEF06 /* RootVC.h */,
 				528BC62D1D1BE72300BBEF06 /* RootVC.m */,
+				528BC6221D1BDE4600BBEF06 /* Mediator(中间件) */,
 				528BC62F1D1BE93800BBEF06 /* 产品业务组件 */,
 				528BC6301D1BE93800BBEF06 /* 基础功能组件 */,
 				528BC6311D1BE93800BBEF06 /* 基础UI组件 */,
-				528BC6221D1BDE4600BBEF06 /* Mediator(中间件) */,
+				520441D41D20C5FA00B90AEE /* FrameWork */,
 				528BC5EF1D1BA82600BBEF06 /* Supporting Files */,
 			);
 			path = APP_Module_Test;
@@ -640,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F033691D1D06BE00CF63C6 /* 2.png in Resources */,
+				52FFBA461D2100EA009E14DD /* main.js in Resources */,
 				528BC5FC1D1BA82600BBEF06 /* Assets.xcassets in Resources */,
 				52F033681D1D06BE00CF63C6 /* 1.png in Resources */,
 				52F0336A1D1D06BE00CF63C6 /* 3.png in Resources */,
@@ -821,8 +853,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/APP_Module_Test/FrameWork",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/APP_Module_Test/FrameWork/JSPatch",
+				);
 				GCC_PREFIX_HEADER = "/Users/rensihao/Desktop/My_Test/APP_Module_Test/APP_Module_Test/基础功能组件/通用宏/PrefixHeader.pch";
 				INFOPLIST_FILE = APP_Module_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rensihao.com.APP-Module-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -834,8 +873,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/APP_Module_Test/FrameWork",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/APP_Module_Test/FrameWork/JSPatch",
+				);
 				GCC_PREFIX_HEADER = "/Users/rensihao/Desktop/My_Test/APP_Module_Test/APP_Module_Test/基础功能组件/通用宏/PrefixHeader.pch";
 				INFOPLIST_FILE = APP_Module_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rensihao.com.APP-Module-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";

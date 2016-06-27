@@ -19,6 +19,10 @@
     //也可以在此处对params进行拆分 然后赋值VC属性 等等
     //...
     
+//    void (^block)(NSString *title) = [params objectForKey:@"block"];
+    storeVC.block = [params objectForKey:@"block"];
+    
+
     return storeVC;
 }
 

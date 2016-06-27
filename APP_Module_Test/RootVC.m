@@ -49,8 +49,12 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
         //商城
         case 0:
         {
-            //1、单纯present一个商城VC
-            [self presentViewController:[[Mediator sharedInstance] Mediator_StoreVC] animated:YES completion:nil];
+            //1、单纯present一个商城VC，带block
+//            [self presentViewController:[[Mediator sharedInstance] Mediator_StoreVCWithBlock:^(NSString *title) {
+//                
+//                NSLog(@"%@", title);
+//                
+//            }] animated:YES completion:nil];
             
             //2、push一个有顶部广告轮播的商城VC，广告图片数据从调用者开始给
             [self.navigationController pushViewController:
@@ -58,6 +62,8 @@ static NSString * const kCellIdentifier = @"kCellIdentifier";
                                                                                        frame:CGRectMake(0, 0, 300, 500)
                                                                           shouldInfiniteLoop:YES]
                                animated:YES];
+            
+            
         }
             break;
         //合伙人中心

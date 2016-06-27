@@ -16,7 +16,7 @@
  *
  *  @return <#return value description#>
  */
-- (StoreVC *)Mediator_StoreVC;
+- (StoreVC *)Mediator_StoreVCWithBlock:(void(^)(NSString *title))block;
 
 
 /**

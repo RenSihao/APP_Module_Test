@@ -48,8 +48,14 @@
 #pragma mark - event response
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    if (_block)
+    {
+        _block(@"哈哈");
+    }
+    
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
+        
     } else {
         [self dismissViewControllerAnimated:YES completion:nil];
     }

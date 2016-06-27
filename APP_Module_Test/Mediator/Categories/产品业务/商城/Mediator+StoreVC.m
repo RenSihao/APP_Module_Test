@@ -19,12 +19,12 @@ NSString * const kMediatorActionNativeFetchStoreVCWithAdvertisement = @"NativeFe
 
 @implementation Mediator (MediatorStoreActions)
 
-- (StoreVC *)Mediator_StoreVC
+- (StoreVC *)Mediator_StoreVCWithBlock:(void (^)(NSString *))block
 {
     //利用 Target - Action 模式 迅速前往对应本地组件 调用相应方法
     StoreVC *storeVC = [self performTarget:kMediatorTargetStore
                                     action:kMediatorActionNativeFetchStoreVC
-                                    params:nil];
+                                    params:@{@"block": block}];
     
     if ([storeVC isKindOfClass:[StoreVC class]]) {
         
